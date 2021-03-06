@@ -1,6 +1,6 @@
 PYTHON = python3
 
-.PHONY = help setup test run clean
+.PHONY: help setup test run clean
 
 .DEFAULT_GOAL = help
 
@@ -17,3 +17,7 @@ setup:
 	@echo "Verifying python3 is installed..."
 	@./setup.sh
 
+test:
+	@echo "Running tests..."
+	@chmod +x test/run_all_tests.sh
+	@./test/run_all_tests.sh
